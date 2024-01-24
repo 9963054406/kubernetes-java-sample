@@ -17,5 +17,12 @@ pipeline {
                 }
             }
         }
+        stage('Dockerbuild') {
+            steps {
+                script {
+                    sh "docker build -t testimage:v1"
+                }
+            }
+        }
     }
 }

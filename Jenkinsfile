@@ -20,7 +20,7 @@ pipeline {
         stage('Dockerbuild') {
             steps {
                 script {
-                    sh "sudo docker build -t testimage:v1 ."
+                    sh "docker build -t testimage:v1 ."
                 }
             }
         }
